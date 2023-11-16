@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Instance.
+    // Singleton Instance.
     public static GameManager Instance { get; private set; }
 
     private void Awake()
@@ -20,5 +20,5 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    // 처리 함수
+    // 기능 작성 예정
 }

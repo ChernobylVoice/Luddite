@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ResourcesManager : MonoBehaviour
 {
-    // Instance.
+    // Singleton Instance.
     public static ResourcesManager Instance { get; private set; }
 
     private void Awake()
@@ -33,5 +33,5 @@ public class ResourcesManager : MonoBehaviour
     public float _population { get { return population; } }
     public float _approvalRating { get { return approvalRating; } }
 
-    
+    // 기능 작성 예정
 }
