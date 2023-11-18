@@ -18,6 +18,7 @@ namespace DS.Windows
             AddStyles();
         }
 
+        // Dialogue window에 GraphView추가.
         private void AddGraphView()
         {
             DSGraphView graphView = new DSGraphView();
@@ -27,6 +28,7 @@ namespace DS.Windows
             rootVisualElement.Add(graphView);
         }
 
+        // Style Variables추가.
         private void AddStyles()
         {
             StyleSheet styleSheet = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSVariables.uss");
