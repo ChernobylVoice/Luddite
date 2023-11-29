@@ -3,6 +3,8 @@ using UnityEngine.UIElements;
 
 namespace DS.Windows
 {
+    using Utilites;
+    
     public class DSEditorWindow : EditorWindow
     {
         [MenuItem("Window/DS/Dialogue Graph")]
@@ -18,10 +20,11 @@ namespace DS.Windows
             AddStyles();
         }
 
+        #region Elements Addition
         // Dialogue window에 GraphView추가.
         private void AddGraphView()
         {
-            DSGraphView graphView = new DSGraphView();
+            DSGraphView graphView = new DSGraphView(this);
 
             graphView.StretchToParentSize();
 
@@ -31,10 +34,9 @@ namespace DS.Windows
         // Style Variables추가.
         private void AddStyles()
         {
-            StyleSheet styleSheet = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSVariables.uss");
-
-            rootVisualElement.styleSheets.Add(styleSheet);
+            rootVisualElement.AddStyleSheets("DialogueSystem/DSVariables.uss");
         }
+        #endregion
     }
 }
 
