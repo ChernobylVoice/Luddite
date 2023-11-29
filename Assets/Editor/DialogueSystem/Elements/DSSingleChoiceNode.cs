@@ -4,6 +4,7 @@ using UnityEditor.Experimental.GraphView;
 namespace DS.Elements
 {
     using Enumerations;
+    using Utilites;
 
     public class DSSingleChoiceNode : DSNode
     {
@@ -22,9 +23,7 @@ namespace DS.Elements
 
             foreach (string choice in Choices)
             {
-                Port choicePort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
-
-                choicePort.portName = choice;
+                Port choicePort = this.CreatePort(choice);
 
                 outputContainer.Add(choicePort);
             }
