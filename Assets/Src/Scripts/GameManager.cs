@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,5 @@ public class GameManager : MonoBehaviour
         // Scene이 변경되었을 때, 유지되도록.
         DontDestroyOnLoad(this);
     }
-
     // 기능 작성 예정
 }
